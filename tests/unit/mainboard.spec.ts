@@ -148,8 +148,18 @@ describe('Mainboard.vue', () => {
                 }
             }
         });
-
-        VERIFY COMPONENT PROP VALUE 
+        expect(wrapper.props().finalmachine.OSName).toBe("Win32");
+        expect(wrapper.props().finalmachine.TotalMemory).toBe("16GB");
+        expect(wrapper.props().finalmachine.FreeMemory).toBe("7GB");
+        expect(wrapper.props().finalmachine.HostName).toBe("WUSND185089-SY1");
+        expect(wrapper.props().finalmachine.Platform).toBe("Win32");
+        expect(wrapper.props().finalmachine.Architecture).toBe("x64");
+        expect(wrapper.props().finalmachine.CPU.length).toEqual(1);
+        expect(wrapper.props().finalmachine.CPU[0]).toBe("Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz");
+        expect(wrapper.props().finalmachine.IPAddress.length).toEqual(1);
+        expect(wrapper.props().finalmachine.IPAddress[0]).toStrictEqual({"Address" : "192.168.1.12", "Net Mask" : "255.255.255.0" });
+       
+        
     });
     
 });
