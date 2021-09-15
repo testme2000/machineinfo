@@ -54,7 +54,6 @@ export default class App extends Vue {
                       const proprecord = cpujson[cpurecord];
                       this.MainMachine.CPU.push(proprecord[`model`]);
                   }
-
               }
               const ipinfo = res[`IPAddress`];
               const wifi = JSON.parse(JSON.stringify(ipinfo["Wi-Fi"]));
@@ -65,10 +64,11 @@ export default class App extends Vue {
                       this.MainMachine.IPAddress.push(record);
                   }
               }
-        }
-      });
-  }
+      })
+  } 
 }
+
+//ADD CYPRESS SUPPORT npx cypress open
 </script>
 
 <style>
