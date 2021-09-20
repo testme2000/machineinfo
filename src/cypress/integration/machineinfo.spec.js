@@ -61,9 +61,15 @@ describe('Complete Integration Testing for MachineInfo', function() {
         cy.get('table').contains('td', "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36").should('exist').should('be.visible');
         cy.get('table').contains('td', "WUSND185089-SY1").should('exist').should('be.visible');
         cy.get('table').contains('td', "fe80::644b:a1bd:2aa8:bda0").should('exist').should('be.visible');
-
-        IMPLEMENT ALL REAMAINNG FIELD VALUE AFTER IPADDRESS
-        
+        cy.get('table').contains('td', "ffff:ffff:ffff:ffff::").should('exist').should('be.visible');
+        cy.get('table').contains('td', "IPv6").should('exist').should('be.visible');
+        cy.get('table').contains('td', "fe80::644b:a1bd:2aa8:bda0/64").should('exist').should('be.visible');
+        cy.get('table').contains('td', "192.168.1.12").should('exist').should('be.visible');
+        cy.get('table').contains('td', "16 GB").should('exist').should('be.visible');
+        cy.get('table').contains('td', "5 GB").should('exist').should('be.visible');
+        cy.get('table').contains('td', "WIN32").should('exist').should('be.visible');
+        cy.get('table').contains('td', "x64").should('exist').should('be.visible');
+        cy.get('table').contains('td', "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz").should('exist').should('be.visible');
     })
 
 })
